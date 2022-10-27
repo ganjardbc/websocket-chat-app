@@ -4,7 +4,7 @@
 const express = require('express')
 const socketio = require('socket.io')
 const bodyParser = require('body-parser')
-const INDEX = '/views/index.html'
+const INDEX = '/index.html'
 
 // utils variable
 const routes = require('./utils/routes')
@@ -14,12 +14,12 @@ class Server {
 	constructor () {
 		// set host and port
 		this.host = 'localhost'
-		this.port = process.env.PORT || 3030
+		this.port = 3030
 
 		// assign express module
 		this.app = express()
 
-		// start server with http module
+		// start express server
 		this.http = this.app
 			.use((req, res) => {
 				res.sendFile(INDEX, {
