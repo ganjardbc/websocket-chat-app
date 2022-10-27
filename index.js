@@ -14,7 +14,7 @@ class Server {
 	constructor () {
 		// set host and port
 		this.host = 'localhost'
-		this.port = 3030
+		this.port = process.env.PORT || 3030
 
 		// assign express module
 		this.app = express()
