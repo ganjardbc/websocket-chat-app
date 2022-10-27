@@ -4,7 +4,7 @@
 const express = require('express')
 const socketio = require('socket.io')
 const bodyParser = require('body-parser')
-const INDEX = '/index.html'
+const INDEX = '/views/index.html'
 
 // utils variable
 const routes = require('./utils/routes')
